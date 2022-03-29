@@ -17,6 +17,11 @@ const PokemonType = () => {
         
         pagesNumber.push(i)
     }
+
+    const lsIndex = page + itemsNumber
+    const firsIndex = page -1
+    
+    const pokepag = pagesNumber.slice(firsIndex , lsIndex)
  
 
     useEffect( () => {
@@ -38,18 +43,20 @@ const PokemonType = () => {
                ) )
             }
 
-            <div>
+            <div className="pagination">
                 <button 
                     onClick={() => setPage( page - 1) }
                     disabled = {page <= 1}
                 >Pagina Previa</button>
 
-                 <div>
+                 <div className="buttons-pages">
                     {
-                        pagesNumber.map( pages => (
-                            <button  key={pages} onClick={()=> setPage(pages)} >
+                        pokepag.map( pages => (                               
+                            
+                                <button  key={pages} onClick={()=> setPage(pages)} >
                                  {pages} 
-                            </button>
+                               </button>                            
+                                                      
                         ) )
                     }
                  </div>  
