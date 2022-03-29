@@ -5,8 +5,7 @@ import PokemonType from './PokemonType';
 
 const PokemonCharacters = () => {
 
-    const name = useSelector( state => state.userName )
-    const [ searchPokemon, setSearchPokemon ] = useState("")
+    const name = useSelector( state => state.userName )    
 
     return (
         <div className='welcom'>
