@@ -5,7 +5,8 @@ import PokemonType from './PokemonType';
 
 const PokemonCharacters = () => {
 
-    const name = useSelector( state => state.userName )    
+    const name = useSelector( state => state.userName )
+    const [ searchPokemon, setSearchPokemon ] = useState("")
 
     return (
         <div className='welcom'>
@@ -26,7 +27,7 @@ const PokemonCharacters = () => {
                     
                 </div>
                 
-                <PokemonType />
+                <PokemonType typepokemon={searchPokemon} />
             </div>  
 
         </div>
