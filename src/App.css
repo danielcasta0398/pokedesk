@@ -337,6 +337,17 @@ footer{
 
  }
 
+ .section-description{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+ }
+
+ .section-description img{
+   width: 314px;
+   height: 314px;
+ }
+
 @media (max-width: 500px){
 
   .img-pokemon{

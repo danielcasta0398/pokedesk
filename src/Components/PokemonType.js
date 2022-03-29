@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Prueba from './Prueba';
+
 
 const PokemonType = () => {
 
+    
     const [ types, setTypes ] = useState([])
     const [ page, setPage ] = useState(1)    
     const itemsNumber = 9        
@@ -29,16 +30,18 @@ const PokemonType = () => {
             .then( e => setTypes(e.data.results) )
     },[ page ] )
 
+    
+
     return (
         <div className='section-pokemon-character' >
             {
                pokemonPaginated.map( type => (
 
-                   <Link to="" key={type.url}>
-                        <div className='card' >                   
+                  
+                        <div className='card' key={type.url} >                   
                             <Prueba url={type.url} />                           
-                        </div>
-                   </Link>
+                        </div>                                             
+                  
                    
                ) )
             }

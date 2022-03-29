@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Prueba = ( {url} ) => {
 
     const [ info, setInfo ] = useState({})
-    
+   
    
     useEffect( () => {
         axios.get(url)
@@ -12,6 +13,8 @@ const Prueba = ( {url} ) => {
     },[ url ] )
 
     return (
+
+        <Link to={`/description/${info.id}`}>
         <div className='img-card-pokemon'>
             <div>
                  <img src={info.sprites?.other["official-artwork"].front_default} alt="" />
@@ -20,6 +23,7 @@ const Prueba = ( {url} ) => {
             </div> 
                        
         </div>
+        </Link>
         
     );
 };
