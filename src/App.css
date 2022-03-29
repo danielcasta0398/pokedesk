@@ -1,38 +1,344 @@
-.App {
+:root{
+  --font-inter: 'Inter', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.img-pokemon{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.pokemon-home{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+ 
+}
+
+.pokemon-background{
+  position: absolute;
+  width: 100%;
+  height: 50%;  
+  background-image: url('https://www.nextn.es/2019/05/pokemon-go-plus-plus-anuncio/0519-29-pokemon-go-plus-0006/');
+  background-repeat: no-repeat;
+  z-index: -1;
+  bottom: 0;
+  right: 0;
+}
+
+
+
+.img-pokemon{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: -15rem;  
+}
+
+.img-pokemon > img{  
+  width: 676px;
+  height: 121px;
+}
+
+.img-pokemon h1{
   text-align: center;
+  font-size: 50px;
+  color: #FE1936;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 61px;
+  margin-top: 2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-pokemon>p{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-home {
+  background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-home button{
+  border: none;
+  background: #D93F3F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  padding: 10px ;  
+  cursor: pointer;
+  color: white;
+  width: 200px;
+}
+
+.gif-pokemon img{
+  width: 500px;
+  height: 100px;
+}
+
+.input-home button:hover{
+ background: #000000;
+ color: #ffffff;
+}
+
+.img-pokemon input{
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  margin-left: 8px;
+  padding-left: 1rem;
+  font-size: 25px;  
+}
+
+.img-pokemon input::placeholder{
+  font-family: 'Roboto', sans-serif;
+  color: #D3D3D3;
+  font-size: 25px;
+  display: flex;
+  text-align: inherit;
+}
+
+.img-pokemon form  div{
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  font-size: 25px;
+  width: 662px;
+}
+
+.fa-solid{
+  padding-right: 5px; 
+}
+
+footer{
+  width: 100vw;
+  height: 124px;
+  background-color: #DD1A1A;
+  position: absolute;
+  bottom: 0;
+}
+
+.div-2{
+  width: 100vw;
+  height: 50px; 
+  background-color: #0c0c0c;
+  position: absolute;
+  bottom: 0;
+  z-index: 10;
+}
+
+.elipse3{ 
+  height: 117px;
+  width: 117px;
+  z-index: 20;
+  
+}
+
+.content-elipse{
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elipse4{
+  margin-top: 8px;
+   width: 63px;
+   height: 63px;
+
+}
+
+.header{
+  position: relative;
+}
+
+.header > div{
+  position: absolute;
+  bottom: 0;
+}
+
+.rectangle-red{
+  width: 100vw;    
+  height: 7.75rem;
+}
+
+.rectangle-black{ 
+  width: 100vw;
+  height: 3.125rem;  
+}
+
+.prueba{
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: end;  
+}
+
+.logo-header{
+  position: absolute;
+  width: 26.875rem;
+  height: 4.75rem;
+  margin-left: 6.25rem;
+  margin-top: 0.625rem;
+  z-index: 30;
+}
+
+.elipse{
+  background: url('../src/assets/Ellipse\ 3\ \(2\).png');
+  width: 117px;
+  height: 100%;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 2.5rem;
+  margin-right: 6rem;
+}
+
+.span-red{
+
+  color: #FE1936;
+  font-family: var(--font-inter);
+  font-weight: 700;
+}
+
+.elipse img{
+  width: 63px;
+  height: 63px;
+  margin-bottom: 0.7rem;
+}
+
+.section-1{
+  margin: 1rem 4rem;
+}
+
+.section-1 > p{
+  font-family: var(--font-inter);
+  font-size: 24px;
+  
+}
+
+.input-search{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  font-size: 25px;
+  width: 500px;
+
+}
+
+.input-search input{
+  border: none;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  margin-left: 8px;
+  padding-left: 1rem;
+  font-size: 25px;  
+}
+
+.input-search input::placeholder{
+  font-family: 'Roboto', sans-serif;
+  color: #D3D3D3;
+  font-size: 25px;
+  display: flex;
+  text-align: inherit;
+}
+
+.input-search button{
+  border: none;
+  background: #D93F3F;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  padding: 10px ;  
+  cursor: pointer;
   color: white;
+  width: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-search button:hover{
+  background: #000000;
+  color: #ffffff;
+ }
+
+ .img-card-pokemon{
+   width: 300px;
+ }
+
+ .img-card-pokemon div{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .img-card-pokemon img{
+   
+   width: 162px;
+   height: 149px;
+ }
+ 
+
+ .section-pokemon-character{
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+ }
+ 
+ .card{
+   border: 1px solid black;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+ }
+
+@media (max-width: 500px){
+
+  .img-pokemon{
+    margin-top: -6rem;
+  }
+
+  .img-pokemon img{
+    width: 300px ;
+    height: 150px;   
+  }
+
+  .img-pokemon h1{
+    font-size: 35px;
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
